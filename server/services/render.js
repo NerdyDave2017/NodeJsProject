@@ -3,7 +3,7 @@ const axios = require("axios");
 exports.homeRoutes = (req, res) => {
   // Make a get request to /api/users
   axios
-    .get("http://localhost:process.env.PORT/api/users")
+    .get("http://localhost:${process.env.PORT}/api/users")
     .then((response) => {
       res.render("index", { users: response.data });
     })
@@ -18,7 +18,7 @@ exports.add_user = (req, res) => {
 
 exports.update_user = (req, res) => {
   axios
-    .get("http://localhost:process.env.PORT/api/users", {
+    .get("http://localhost:${process.env.PORT}/api/users", {
       params: { id: req.query.id },
     })
     .then((userdata) => {
