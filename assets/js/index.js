@@ -22,7 +22,7 @@ $("#update_user").submit(function (event) {
   });
 
   var request = {
-    url: `http://localhost:${process.env.PORT}/api/users/${data.id}`,
+    url: `http://nodejsproject-production.up.railway.app/api/users/${data.id}`,
     method: "PUT",
     data: data,
   };
@@ -38,7 +38,7 @@ if (window.location.pathname == "/") {
   $ondelete.click(function () {
     var id = $(this).attr("data-id");
     var request = {
-      url: `http://localhost:${process.env.PORT}/api/users/${id}`,
+      url: `http://nodejsproject-production.up.railway.app/api/users/${id}`,
       method: "DELETE",
     };
 
